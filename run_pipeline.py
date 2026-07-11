@@ -7,7 +7,7 @@ of it, from the command line.
     python run_pipeline.py --force           # ignore all caches and recompute everything
 
 Each stage's output is cached to disk (see src/utils.py:load_or_compute), so
-re-running this script after, say, changing the training hyperparameters will
+re-running this script after changing the training hyperparameters will
 skip straight to re-training rather than re-downloading data and re-running
 AlephBERT over both corpora again.
 """
@@ -80,7 +80,7 @@ def run(stage="evaluate", force=False):
 
     translations, results = translate.run_evaluation(ancient_only, modern_only, trained_embeddings)
 
-    print("\n=== Overall average cosine similarity by configuration ===")
+    print("\n Overall average cosine similarity by configuration")
     pprint.pprint(results["overall"])
 
     return translations, results
