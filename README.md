@@ -125,7 +125,3 @@ src/
   translate.py    # nearest-neighbor translation + evaluation
 run_pipeline.py    # CLI entry point
 ```
-
-## License
-
-MIT.
